@@ -53,12 +53,12 @@ window.addEventListener('DOMContentLoaded', event => {
  // Define working hours
  const workingHours = {
     0: { day: "Sunday", hours: "Closed" },
-    1: { day: "Monday", hours: "08:00 - 17:00" },
-    2: { day: "Tuesday", hours: "08:00 - 17:00" },
-    3: { day: "Wednesday", hours: "08:00 - 17:00" },
-    4: { day: "Thursday", hours: "08:00 - 17:00" },
-    5: { day: "Friday", hours: "08:00 - 17:00" },
-    6: { day: "Saturday", hours: "08:00 - 18:00" }
+    1: { day: "Monday", hours: "08:00 - 16:00" },
+    2: { day: "Tuesday", hours: "08:00 - 16:00" },
+    3: { day: "Wednesday", hours: "08:00 - 16:00" },
+    4: { day: "Thursday", hours: "08:00 - 16:00" },
+    5: { day: "Friday", hours: "08:00 - 16:00" },
+    6: { day: "Saturday", hours: "09:00 - 15:00" }
 };
 
 const now = new Date();
