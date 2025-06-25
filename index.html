@@ -285,7 +285,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-150 shadow-sm border-0">
                         <div class="card-body text-center"> <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-circle fa-stack-2x text-info"></i>
                                 <i class="fas fa-lungs fa-stack-1x fa-inverse"></i>
                             </span>
                             <h4>Lung Function Test</h4>
@@ -303,7 +303,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-150 shadow-sm border-0">
                         <div class="card-body text-center"> <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-circle fa-stack-2x text-warning"></i>
                                 <i class="fas fa-running fa-stack-1x fa-inverse"></i>
                             </span>
                             <h4 >Sport rehabilitation</h4>
@@ -339,7 +339,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-150 shadow-sm border-0">
                         <div class="card-body text-center"> <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-circle fa-stack-2x text-info"></i>
                                 <i class="fas fa-heartbeat fa-stack-1x fa-inverse"></i>
                             </span>
                             <h4 class="my-3">Chest Conditions</h4>
@@ -356,7 +356,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-150 shadow-sm border-0">
                         <div class="card-body text-center"> <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-circle fa-stack-2x text-deep-blue"></i>
                                 <i class="fas fas fa-bone fa-stack-1x fa-inverse"></i>
                             </span>
                             <h4 >Back pain</h4>
@@ -989,9 +989,9 @@
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                         <i class="fas fa-times me-1"></i> Close
                     </button>
-                    <button type="button" class="btn btn-danger">
+                    <!-- <button type="button" class="btn btn-danger">
                         <i class="fas fa-heart-circle-check me-1"></i> Start Your Recovery Plan
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>
@@ -1089,9 +1089,9 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     <i class="fas fa-times me-1"></i> Close
                 </button>
-                <button type="button" class="btn btn-indigo text-white">
+                <!-- <button type="button" class="btn btn-indigo text-white">
                     <i class="fas fa-brain me-1"></i> Begin Your Recovery Journey
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -1208,9 +1208,9 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     <i class="fas fa-times me-1"></i> Close
                 </button>
-                <button type="button" class="btn btn-deep-purple text-white">
+                <!-- <button type="button" class="btn btn-deep-purple text-white">
                     <i class="fas fa-brain me-1"></i> Start Your Neuro Rehab
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -1312,9 +1312,9 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     <i class="fas fa-times me-1"></i> Close
                 </button>
-                <button type="button" class="btn btn-danger">
+                <!-- <button type="button" class="btn btn-danger">
                     <i class="fas fa-heart-pulse me-1"></i> Schedule Your Stress Test
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -1425,9 +1425,9 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     <i class="fas fa-times me-1"></i> Close
                 </button>
-                <button type="button" class="btn btn-success">
+                <!-- <button type="button" class="btn btn-success">
                     <i class="fas fa-calendar-plus me-1"></i> Start Your Recovery
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -1525,9 +1525,9 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     <i class="fas fa-times me-1"></i> Close
                 </button>
-                <button type="button" class="btn btn-blue">
+                <!-- <button type="button" class="btn btn-blue">
                     <i class="fas fa-calendar-check me-1"></i> Start Orthopaedic Rehab
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -1633,9 +1633,9 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     <i class="fas fa-times me-1"></i> Close
                 </button>
-                <button type="button" class="btn btn-primary">
+                <!-- <button type="button" class="btn btn-primary">
                     <i class="fas fa-calendar-check me-1"></i> Start Orthopaedic Rehab
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -1651,8 +1651,90 @@
   border-color: #0d6efd;
 }
 </style>
+<div class="modal fade" id="lungModal" tabindex="-1" aria-labelledby="lungModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0">
+            <!-- Header with respiratory blue theme -->
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title" id="lungModalLabel">
+                    <i class="fas fa-lungs me-2"></i>Lung Function Test (PFT)
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Intro with key message -->
+                <div class="alert alert-info bg-info-subtle border-info mb-4">
+                    <i class="fas fa-wind me-2"></i>
+                    Essential testing for respiratory conditions and rehab planning.
+                </div>
+                
+                <!-- Key Measurements -->
+                <h6 class="mb-3 text-info"><i class="fas fa-ruler-combined me-2"></i>What We Measure:</h6>
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Total lung capacity (air volume)</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Airflow speed (inhalation/exhalation)</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Oxygen exchange efficiency</li>
+                </ul>
+                
+                <!-- Clinical Applications -->
+                <h6 class="mt-4 mb-3 text-info"><i class="fas fa-clipboard-list me-2"></i>Clinical Uses:</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-lungs-virus text-info me-2"></i>Asthma/COPD monitoring</li>
+                            <li class="mb-2"><i class="fas fa-virus text-info me-2"></i>Post-COVID assessment</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-procedures text-info me-2"></i>Pre/post-surgical evaluation</li>
+                            <li class="mb-2"><i class="fas fa-dumbbell text-info me-2"></i>Exercise tolerance testing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Test Process -->
+                <h6 class="mt-4 mb-3 text-info"><i class="fas fa-clipboard-question me-2"></i>The Testing Process:</h6>
+                <div class="bg-light p-3 rounded border-start border-info border-4">
+                    <div class="d-flex mb-2">
+                        <i class="fas fa-1 text-info me-3 mt-1"></i>
+                        <div>You'll breathe into a spirometer following instructions</div>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <i class="fas fa-2 text-info me-3 mt-1"></i>
+                        <div>Non-invasive and painless (takes 10-15 minutes)</div>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fas fa-3 text-info me-3 mt-1"></i>
+                        <div>Immediate results inform your treatment plan</div>
+                    </div>
+                </div>
+                
+                <!-- Value Proposition -->
+                <div class="alert alert-light mt-4">
+                    <i class="fas fa-heartbeat text-info me-2"></i>
+                    <strong>A Foundation for Better Breathing:</strong> Whether managing chronic conditions or recovering from illness, PFT provides the data we need to optimize your respiratory rehab.
+                </div>
+            </div>
+            
+            <!-- Footer with CTA -->
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i> Close
+                </button>
+                <!-- <button type="button" class="btn btn-info text-white">
+                    <i class="fas fa-lungs me-1"></i> Schedule Your Lung Test
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
 
-    <div class="modal fade" id="lungModal" tabindex="-1" aria-labelledby="lungModalLabel" aria-hidden="true">
+<style>
+.bg-info-subtle { background-color: #d1ecf1; }
+</style>
+    <!-- <div class="modal fade" id="lungModal" tabindex="-1" aria-labelledby="lungModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1711,245 +1793,474 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="sportsModal" tabindex="-1" aria-labelledby="sportsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="sportsModalLabel">Sports Rehabilitation</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-muted">
-                    <p class="mb-3"><strong>At our physiotherapy practice, we provide Sports Rehabilitation for athletes
-                            and active individuals recovering from injuries or looking to enhance their performance.
-                            Whether you play professionally, competitively, or recreationally, we understand the demands
-                            of sport and the importance of a safe, complete recovery.</strong></p>
+    </div> -->
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h6 class="mt-4 mb-3">Who We Help:</h6>
-                            <ul class="mb-4 list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Recreational and elite athletes
-                                </li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Youth and school athletes</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Gym enthusiasts</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Post-injury/surgery returnees
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="mt-4 mb-3">Common Injuries Treated:</h6>
-                            <ul class="mb-4 list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i>ACL/MCL/meniscus injuries</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Rotator cuff/shoulder issues
-                                </li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Achilles/plantar fasciitis</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Concussion recovery</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h6 class="mt-4 mb-3">Our Sports Rehab Services:</h6>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Sport-specific movement
-                                    analysis</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Functional rehabilitation</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Neuromuscular training</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Manual therapy techniques</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Return-to-sport testing</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Injury prevention programs</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Performance enhancement</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Recovery education</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="alert alert-info mt-4">
-                        <i class="fas fa-running me-2"></i>
-                        <strong>We don't just rehab injuries—we rebuild athletes.</strong> Our programs are designed to
-                        address the physical, technical, and psychological demands of your sport.
-                    </div>
-
-                    <p class="mt-3"><strong>Whether you're aiming for competition or pain-free activity, we'll guide
-                            your recovery with clinical expertise and athletic insight.</strong></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">
-                        <i class="fas fa-calendar-check me-2"></i>Schedule Sports Assessment
-                    </button>
-                </div>
+<div class="modal fade" id="sportsModal" tabindex="-1" aria-labelledby="sportsRehabModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0">
+            <!-- Header with energetic orange theme -->
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title" id="sportsRehabModalLabel">
+                    <i class="fas fa-running me-2"></i>Sports Rehabilitation
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="medicoLegalModal" tabindex="-1" aria-labelledby="medicoLegalModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header bg-light">
-                    <h5 class="modal-title" id="medicoLegalModalLabel">
-                        <i class="fas fa-file-contract text-primary me-2"></i>Medico-Legal Reports
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            
+            <div class="modal-body">
+                <!-- Intro with athlete-focused message -->
+                <div class="alert alert-warning bg-warning-subtle border-warning mb-4">
+                    <i class="fas fa-trophy me-2"></i>
+                    <strong>Helping you get back in the game—stronger, faster, and safer.</strong> Expert rehab tailored to athletes at all levels.
                 </div>
-                <div class="modal-body">                    
-                    <div class="alert alert-primary">
-                        <i class="fas fa-balance-scale me-2"></i>
-                        Our reports are court-ready and prepared to established medico-legal standards.
-                    </div>
-    
-                    <h6 class="mt-4 mb-3">Our Medico-Legal Services Include:</h6>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Comprehensive musculoskeletal assessments</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Diagnosis & prognosis documentation</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Functional limitation analysis</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Future care needs assessment</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Causation and impact evaluation</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Personal injury claim support</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Workplace injury documentation</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Collaboration with legal teams</li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <div class="bg-light p-4 mt-4 rounded">
-                        <h6><i class="fas fa-clipboard-check text-primary me-2"></i>Report Features:</h6>
-                        <ul class="list-unstyled mb-0">
-                            <li><i class="fas fa-arrow-right text-muted me-2"></i>Objective, evidence-based findings</li>
-                            <li><i class="fas fa-arrow-right text-muted me-2"></i>Clear timelines of injury progression</li>
-                            <li><i class="fas fa-arrow-right text-muted me-2"></i>Treatment recommendations</li>
-                            <li><i class="fas fa-arrow-right text-muted me-2"></i>Vocational impact assessment</li>
+                
+                <!-- Athlete Types -->
+                <h6 class="mb-3 text-warning"><i class="fas fa-users me-2"></i>Who We Help:</h6>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="badge bg-warning-subtle text-warning"><i class="fas fa-person-running me-1"></i> Elite Athletes</span>
+                    <span class="badge bg-warning-subtle text-warning"><i class="fas fa-child-reaching me-1"></i> Youth Sports</span>
+                    <span class="badge bg-warning-subtle text-warning"><i class="fas fa-dumbbell me-1"></i> Gym Enthusiasts</span>
+                    <span class="badge bg-warning-subtle text-warning"><i class="fas fa-user-injured me-1"></i> Post-Injury Returnees</span>
+                </div>
+                
+                <!-- Common Injuries - Two Column Layout -->
+                <h6 class="mt-4 mb-3 text-warning"><i class="fas fa-bandaid me-2"></i>Common Sports Injuries:</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>ACL/MCL/meniscus tears</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>Rotator cuff injuries</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>Tennis/golfer's elbow</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>Achilles tendinopathy</li>
                         </ul>
                     </div>
-    
-                    <div class="mt-4">
-                        <p class="mb-1"><strong>Typical Cases We Assess:</strong></p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-primary-subtle text-primary">Road Traffic Accidents</span>
-                            <span class="badge bg-primary-subtle text-primary">Workplace Injuries</span>
-                            <span class="badge bg-primary-subtle text-primary">Slip/Trip Claims</span>
-                            <span class="badge bg-primary-subtle text-primary">Sports Injuries</span>
-                            <span class="badge bg-primary-subtle text-primary">Chronic Pain Cases</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        <i class="fas fa-times me-1"></i> Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                        <i class="fas fa-envelope me-1"></i> Request Report Guidelines
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="chestPhysioModal" tabindex="-1" aria-labelledby="chestPhysioModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content border-0">
-                <!-- Header with blue accent for respiratory theme -->
-                <div class="modal-header  text-white">
-                    <h5 class="modal-title" id="chestPhysioModalLabel">
-                        <i class="fas fa-lungs me-2"></i>Physiotherapy for Chest Conditions
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                
-                <div class="modal-body">
-                    <!-- Introductory section -->
-                  
-                    
-                    <p class="mb-4">At our practice, we provide expert care for individuals with chest and respiratory conditions, helping improve lung function, reduce symptoms, and enhance quality of life.</p>
-                    
-                    <!-- Conditions Treated - Two Column Layout -->
-                    <h6 class="mb-3 text-info"><i class="fas fa-list-check me-2"></i>Conditions We Treat:</h6>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>COPD</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Asthma</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Bronchiectasis</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Post-COVID recovery</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Pneumonia recovery</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Pulmonary fibrosis</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Rib fractures</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Breathing pattern disorders</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Services Provided -->
-                    <h6 class="mt-4 mb-3 text-info"><i class="fas fa-hand-holding-medical me-2"></i>Our Chest Physiotherapy Services:</h6>
-                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                        <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h6 class="card-title text-info"><i class="fas fa-lungs me-2"></i>Airway Clearance</h6>
-                                    <p class="card-text small">Techniques to help remove mucus and improve lung function.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h6 class="card-title text-info"><i class="fas fa-breath me-2"></i>Breathing Retraining</h6>
-                                    <p class="card-text small">Improve breathing efficiency and reduce shortness of breath.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h6 class="card-title text-info"><i class="fas fa-dumbbell me-2"></i>Pulmonary Rehab</h6>
-                                    <p class="card-text small">Exercises to build strength and stamina.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h6 class="card-title text-info"><i class="fas fa-book-medical me-2"></i>Patient Education</h6>
-                                    <p class="card-text small">Inhaler techniques, pacing, and energy conservation.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial/Outcome -->
-                    <div class="bg-light p-3 rounded mt-4 border-start border-info border-4">
-                        <p class="mb-0"><i class="fas fa-quote-left text-info me-2"></i>Our personalized approach helps patients improve lung capacity, reduce hospital admissions, and maintain active lifestyles despite chronic conditions.</p>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>Hamstring strains</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>Shin splints</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>Concussions</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i>Post-surgical rehab</li>
+                        </ul>
                     </div>
                 </div>
                 
-                <!-- Footer with CTA -->
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        <i class="fas fa-times me-1"></i> Close
-                    </button>
-                    <button type="button" class="btn btn-info text-white">
-                        <i class="fas fa-calendar-plus me-1"></i> Book Respiratory Assessment
-                    </button>
+                <!-- Rehab Services - Card Layout -->
+                <h6 class="mt-4 mb-3 text-warning"><i class="fas fa-list-check me-2"></i>Our Sports Rehab Services:</h6>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <div class="col">
+                        <div class="card h-100 border-warning">
+                            <div class="card-body">
+                                <h6 class="card-title text-warning"><i class="fas fa-search-plus me-2"></i>Movement Analysis</h6>
+                                <p class="card-text small">Detailed biomechanical assessment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-warning">
+                            <div class="card-body">
+                                <h6 class="card-title text-warning"><i class="fas fa-baseball me-2"></i>Sport-Specific Rehab</h6>
+                                <p class="card-text small">Tailored to your sport's demands</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-warning">
+                            <div class="card-body">
+                                <h6 class="card-title text-warning"><i class="fas fa-dumbbell me-2"></i>Performance Training</h6>
+                                <p class="card-text small">Strength & neuromuscular control</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-warning">
+                            <div class="card-body">
+                                <h6 class="card-title text-warning"><i class="fas fa-flag-checkered me-2"></i>Return-to-Sport Testing</h6>
+                                <p class="card-text small">Progressive loading plans</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Athlete's Advantage -->
+                <div class="bg-light p-3 rounded mt-4 border-start border-warning border-4">
+                    <div class="d-flex">
+                        <i class="fas fa-quote-left text-warning mt-1 me-3"></i>
+                        <div>
+                            <p class="mb-1 fst-italic">"We combine clinical expertise with athletic insight to bridge the gap between rehab and peak performance."</p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-medal text-warning me-2"></i>
+                                <small class="text-muted">90% of athletes return to sport at or above pre-injury levels</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer with CTA -->
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i> Close
+                </button>
+                <!-- <button type="button" class="btn btn-warning text-dark">
+                    <i class="fas fa-play me-1"></i> Start Your Comeback
+                </button> -->
             </div>
         </div>
     </div>
+</div>
+
+<style>
+.bg-warning-subtle { background-color: #fff3cd; }
+</style>
+<div class="modal fade" id="medicoLegalModal" tabindex="-1" aria-labelledby="medicoLegalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0">
+            <!-- Header with professional blue theme -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="medicoLegalModalLabel">
+                    <i class="fas fa-file-contract me-2"></i>Medico-Legal Reports
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Intro with professional emphasis -->
+                <div class="alert alert-primary bg-primary-subtle border-primary mb-4">
+                    <i class="fas fa-balance-scale me-2"></i>
+                    <strong>Professional, evidence-based reporting</strong> for legal and insurance purposes.
+                </div>
+                
+                <!-- Service Overview -->
+                <p class="mb-4">
+                    At our physiotherapy practice, we offer comprehensive Medico-Legal Reports for individuals involved in personal injury claims, workplace injuries, road traffic accidents, or other legal matters requiring an expert physiotherapy opinion.
+                </p>
+                
+                <!-- Key Features -->
+                <h6 class="mb-3 text-primary"><i class="fas fa-clipboard-check me-2"></i>What Our Reports Provide:</h6>
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Objective assessment of physical condition and injuries</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Clear documentation of functional limitations</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Professional opinion on causation and impact</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Evidence-based rehabilitation recommendations</li>
+                </ul>
+                
+                <!-- Service Details - Card Layout -->
+                <h6 class="mt-4 mb-3 text-primary"><i class="fas fa-list-alt me-2"></i>Our Medico-Legal Services:</h6>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <div class="col">
+                        <div class="card h-100 border-primary">
+                            <div class="card-body">
+                                <h6 class="card-title text-primary"><i class="fas fa-user-md me-2"></i>Comprehensive Assessments</h6>
+                                <p class="card-text small">Detailed evaluation of musculoskeletal, orthopaedic, or neurological injuries</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-primary">
+                            <div class="card-body">
+                                <h6 class="card-title text-primary"><i class="fas fa-file-medical me-2"></i>Structured Reports</h6>
+                                <p class="card-text small">Clear documentation of diagnosis, prognosis, and treatment plans</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-primary">
+                            <div class="card-body">
+                                <h6 class="card-title text-primary"><i class="fas fa-procedures me-2"></i>Future Care Analysis</h6>
+                                <p class="card-text small">Assessment of ongoing rehabilitation needs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-primary">
+                            <div class="card-body">
+                                <h6 class="card-title text-primary"><i class="fas fa-handshake me-2"></i>Legal Collaboration</h6>
+                                <p class="card-text small">Professional support for claims and court proceedings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional Assurance -->
+                <div class="bg-light p-3 rounded mt-4 border-start border-primary border-4">
+                    <div class="d-flex">
+                        <i class="fas fa-quote-left text-primary mt-1 me-3"></i>
+                        <div>
+                            <p class="mb-1 fst-italic">"Our reports are prepared by experienced physiotherapists with thorough understanding of medico-legal standards, ensuring clinical accuracy and objectivity for legal proceedings."</p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-gavel text-primary me-2"></i>
+                                <small class="text-muted">Accepted by courts, insurers, and legal professionals nationwide</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Client Types -->
+                <h6 class="mt-4 mb-3 text-primary"><i class="fas fa-users me-2"></i>Who We Work With:</h6>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="badge bg-primary-subtle text-primary"><i class="fas fa-briefcase me-1"></i> Solicitors</span>
+                    <span class="badge bg-primary-subtle text-primary"><i class="fas fa-car-crash me-1"></i> Insurance Companies</span>
+                    <span class="badge bg-primary-subtle text-primary"><i class="fas fa-building me-1"></i> Employers</span>
+                    <span class="badge bg-primary-subtle text-primary"><i class="fas fa-user-tie me-1"></i> Case Managers</span>
+                    <span class="badge bg-primary-subtle text-primary"><i class="fas fa-scale-balanced me-1"></i> Courts</span>
+                </div>
+            </div>
+            
+            <!-- Footer with CTA -->
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i> Close
+                </button>
+                <!-- <button type="button" class="btn btn-primary">
+                    <i class="fas fa-envelope me-1"></i> Request a Report
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.bg-primary-subtle { background-color: #cfe2ff; }
+</style>
+  <div class="modal fade" id="chestPhysioModal" tabindex="-1" aria-labelledby="chestPhysioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0">
+            <!-- Header with calming teal theme -->
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title" id="chestPhysioModalLabel">
+                    <i class="fas fa-lungs me-2"></i>Physiotherapy for Chest Conditions
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Intro with breathing-focused message -->
+                <div class="alert alert-info bg-info-subtle border-info mb-4">
+                    <i class="fas fa-wind me-2"></i>
+                    <strong>Helping you breathe easier and live more actively.</strong> Expert care for respiratory conditions and recovery.
+                </div>
+                
+                <!-- Service Overview -->
+                <p class="mb-4">
+                    We provide expert care for individuals living with or recovering from chest and respiratory conditions. Whether you're managing chronic lung disease, recovering from infection, or experiencing breathlessness, we support your respiratory health and overall well-being.
+                </p>
+                
+                <!-- Conditions Treated - Two Column Layout -->
+                <h6 class="mb-3 text-info"><i class="fas fa-heartbeat me-2"></i>Conditions We Treat:</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>COPD</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Asthma</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Bronchiectasis</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Post-COVID recovery</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Pulmonary fibrosis</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Rib fractures</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Breathing pattern disorders</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Post-pneumonia recovery</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Services - Card Layout -->
+                <h6 class="mt-4 mb-3 text-info"><i class="fas fa-list-check me-2"></i>Our Chest Physiotherapy Services:</h6>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <div class="col">
+                        <div class="card h-100 border-info">
+                            <div class="card-body">
+                                <h6 class="card-title text-info"><i class="fas fa-lungs-virus me-2"></i>Airway Clearance</h6>
+                                <p class="card-text small">Techniques to remove mucus and improve lung function</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-info">
+                            <div class="card-body">
+                                <h6 class="card-title text-info"><i class="fas fa-breath me-2"></i>Breathing Retraining</h6>
+                                <p class="card-text small">Improve efficiency and reduce shortness of breath</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-info">
+                            <div class="card-body">
+                                <h6 class="card-title text-info"><i class="fas fa-dumbbell me-2"></i>Pulmonary Rehab</h6>
+                                <p class="card-text small">Exercises to build strength and stamina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-info">
+                            <div class="card-body">
+                                <h6 class="card-title text-info"><i class="fas fa-procedures me-2"></i>Postural Drainage</h6>
+                                <p class="card-text small">Positioning techniques to assist lung expansion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Patient Focus -->
+                <div class="bg-light p-3 rounded mt-4 border-start border-info border-4">
+                    <div class="d-flex">
+                        <i class="fas fa-quote-left text-info mt-1 me-3"></i>
+                        <div>
+                            <p class="mb-1 fst-italic">"Our personalized approach focuses on improving lung capacity, reducing symptoms, and enhancing quality of life through evidence-based techniques."</p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-book-medical text-info me-2"></i>
+                                <small class="text-muted">Includes education on inhaler use, pacing, and energy conservation</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer with CTA -->
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i> Close
+                </button>
+                <!-- <button type="button" class="btn btn-info text-white">
+                    <i class="fas fa-calendar-check me-1"></i> Book Respiratory Assessment
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.bg-info-subtle { background-color: #d1ecf1; }
+</style>
+  <div class="modal fade" id="backPainModal" tabindex="-1" aria-labelledby="backPainModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0">
+            <!-- Header with deep blue theme -->
+            <div class="modal-header bg-deep-blue text-white">
+                <h5 class="modal-title" id="backPainModalLabel">
+                    <i class="fas fa-bone me-2"></i>Back Pain Treatment
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Intro with pain relief focus -->
+                <div class="alert alert-deep-blue bg-deep-blue-subtle border-deep-blue mb-4">
+                    <i class="fas fa-hand-holding-heart me-2"></i>
+                    <strong>Relieve pain. Restore movement. Regain control.</strong> Expert care for your back pain recovery.
+                </div>
+                
+                <!-- Service Overview -->
+                <p class="mb-4">
+                    We specialize in treating all types of back pain—from sudden strains to chronic conditions. Our hands-on approach addresses the root cause while providing immediate pain relief and long-term solutions.
+                </p>
+                
+                <!-- Conditions Treated - Two Column Layout -->
+                <h6 class="mb-3 text-deep-blue"><i class="fas fa-search-plus me-2"></i>Common Causes We Treat:</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Muscle strains</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Herniated discs</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Sciatica</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Degenerative disc disease</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Postural pain</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Facet joint issues</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Scoliosis</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Pregnancy-related back pain</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Post-surgical rehab</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-deep-blue me-2"></i>Chronic back conditions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Services - Card Layout -->
+                <h6 class="mt-4 mb-3 text-deep-blue"><i class="fas fa-tasks me-2"></i>Our Back Pain Services:</h6>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <div class="col">
+                        <div class="card h-100 border-deep-blue">
+                            <div class="card-body">
+                                <h6 class="card-title text-deep-blue"><i class="fas fa-hands me-2"></i>Manual Therapy</h6>
+                                <p class="card-text small">Hands-on techniques to ease stiffness and restore mobility</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-deep-blue">
+                            <div class="card-body">
+                                <h6 class="card-title text-deep-blue"><i class="fas fa-dumbbell me-2"></i>Targeted Exercises</h6>
+                                <p class="card-text small">Strengthen core and back muscles</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-deep-blue">
+                            <div class="card-body">
+                                <h6 class="card-title text-deep-blue"><i class="fas fa-user-md me-2"></i>Comprehensive Assessment</h6>
+                                <p class="card-text small">Identify the true source of your pain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-deep-blue">
+                            <div class="card-body">
+                                <h6 class="card-title text-deep-blue"><i class="fas fa-spa me-2"></i>Pain Relief Techniques</h6>
+                                <p class="card-text small">Including dry needling and TENS therapy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Holistic Approach -->
+                <div class="bg-light p-3 rounded mt-4 border-start border-deep-blue border-4">
+                    <div class="d-flex">
+                        <i class="fas fa-quote-left text-deep-blue mt-1 me-3"></i>
+                        <div>
+                            <p class="mb-1 fst-italic">"We treat more than just symptoms—we help you understand and manage your condition with a holistic approach for lasting results."</p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-seedling text-deep-blue me-2"></i>
+                                <small class="text-muted">Includes postural education, ergonomic advice, and self-management strategies</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer with CTA -->
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i> Close
+                </button>
+                <!-- <button type="button" class="btn btn-deep-blue text-white">
+                    <i class="fas fa-calendar-plus me-1"></i> Schedule Back Assessment
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Deep Blue Color Scheme */
+.bg-deep-blue { background-color: #1a237e; }
+.text-deep-blue { color: #1a237e; }
+.bg-deep-blue-subtle { background-color: #e8eaf6; }
+.border-deep-blue { border-color: #1a237e !important; }
+.btn-deep-blue { 
+  background-color: #1a237e;
+  border-color: #1a237e;
+  color: white;
+}
+.alert-deep-blue {
+  color: #1a237e;
+  background-color: #e8eaf6;
+  border-color: #c5cae9;
+}
+</style>
 
     <div class="modal fade" id="backPainModal" tabindex="-1" aria-labelledby="backPainModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -2036,9 +2347,9 @@
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                         <i class="fas fa-times me-1"></i> Close
                     </button>
-                    <button type="button" class="btn btn-info">
+                    <!-- <button type="button" class="btn btn-info">
                         <i class="fas fa-calendar-check me-1"></i> Book Back Assessment
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>
@@ -2145,9 +2456,9 @@
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                         <i class="fas fa-times me-1"></i> Close
                     </button>
-                    <button type="button" class="btn btn-purple text-white">
+                    <!-- <button type="button" class="btn btn-purple text-white">
                         <i class="fas fa-calendar-check me-1"></i> Find Your Headache Triggers
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>
@@ -2245,9 +2556,9 @@
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                         <i class="fas fa-times me-1"></i> Close
                     </button>
-                    <button type="button" class="btn btn-pink text-white">
+                    <!-- <button type="button" class="btn btn-pink text-white">
                         <i class="fas fa-calendar-heart me-1"></i> Book Confidential Consultation
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>
