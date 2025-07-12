@@ -95,6 +95,133 @@ for (let i = 0; i < 7; i++) {
         item.style.color = "#0dcaf0"; // Highlight current day
         item.style.fontWeight = "bold";
     }
-    workingHoursList.appendChild(item);
+    // workingHoursList.appendChild(item);
 }
+
+  const masthead = document.querySelector('.masthead');
+  const dotsContainer = document.querySelector('.slider-dots');
+  const pauseBtn = document.querySelector('.pause-btn');
+  const playBtn = document.querySelector('.play-btn');
+  
+  // Image URLs
+  const images = [
+    "../assets/img/img4.png",
+    "../assets/img/img3.png",
+    "../assets/img/img1.png",
+    "../assets/img/img2.png"
+  ];
+  
+  let currentIndex = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+  let slideInterval;
+
+  // Create dots
+  images.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  // Auto-slide function
+  function startAutoSlide() {
+    slideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateBackground();
+    }, 5000); // 5-second interval
+  }
+
+  // Update background and dots
+  function updateBackground() {
+    masthead.style.backgroundImage = `url('${images[currentIndex]}')`;
+    
+    // Update dots
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  // Manual navigation
+  function goToSlide(index) {
+    currentIndex = index;
+    updateBackground();
+    resetAutoSlide();
+  }
+
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
+
+  // Touch swipe detection
+  masthead.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    clearInterval(slideInterval); // Pause auto-slide during swipe
+  }, { passive: true });
+
+  masthead.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    startAutoSlide(); // Resume auto-slide
+  }, { passive: true });
+
+  function handleSwipe() {
+    const threshold = 50; // Minimum swipe distance
+    if (touchEndX < touchStartX - threshold) {
+      // Swipe left (next)
+      currentIndex = (currentIndex + 1) % images.length;
+    } else if (touchEndX > touchStartX + threshold) {
+      // Swipe right (previous)
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+    updateBackground();
+  }
+
+  // Pause/Play controls
+  pauseBtn.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    pauseBtn.classList.add('hidden');
+    playBtn.classList.remove('hidden');
+  });
+
+  playBtn.addEventListener('click', () => {
+    startAutoSlide();
+    playBtn.classList.add('hidden');
+    pauseBtn.classList.remove('hidden');
+  });
+
+  // Initialize
+  updateBackground();
+  startAutoSlide();
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.read-more-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const contentId = button.getAttribute('aria-controls');
+    const content = document.getElementById(contentId);
+    if (!content) return;
+
+    // Toggle only the targeted content
+    content.classList.toggle('expanded');
+    
+    // Update button text accordingly
+    const isExpanded = content.classList.contains('expanded');
+    button.textContent = isExpanded ? 'Read Less' : 'Read More';
+    button.setAttribute('aria-expanded', isExpanded);
+  });
 });
+
+});
+
+
