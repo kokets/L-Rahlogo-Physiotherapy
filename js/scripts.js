@@ -105,10 +105,10 @@ for (let i = 0; i < 7; i++) {
   
   // Image URLs
   const images = [
-    "../assets/img/img4.png",
-    "../assets/img/img3.png",
-    "../assets/img/img1.png",
-    "../assets/img/img2.png"
+    "../assets/img/img4.jpg",
+    "../assets/img/img3.jpg",
+    "../assets/img/img1.jpg",
+    "../assets/img/img2.jpg"
   ];
   
   let currentIndex = 0;
