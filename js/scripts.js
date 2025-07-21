@@ -105,10 +105,10 @@ for (let i = 0; i < 7; i++) {
   
   // Image URLs
   const images = [
-    "../assets/img/img4.jpg",
-    "../assets/img/img3.jpg",
-    "../assets/img/img1.jpg",
-    "../assets/img/img2.jpg"
+    "/assets/img/img4.jpg",
+    "/assets/img/img3.jpg",
+    "/assets/img/img1.jpg",
+    "/assets/img/img2.jpg"
   ];
   
   let currentIndex = 0;
@@ -199,7 +199,73 @@ for (let i = 0; i < 7; i++) {
 
 
 
-
+ const slides = document.querySelectorAll('.team-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+    let currentIndex1 = 0;
+    
+    // Initialize carousel
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+    
+    // Navigation
+    function goToPrev() {
+        currentIndex1 = (currentIndex1 > 0) ? currentIndex1 - 1 : slides.length - 1;
+        showSlide(currentIndex1);
+    }
+    
+    function goToNext() {
+        currentIndex1 = (currentIndex1 < slides.length - 1) ? currentIndex1 + 1 : 0;
+        showSlide(currentIndex1);
+    }
+    
+    prevBtn.addEventListener('click', goToPrev);
+    nextBtn.addEventListener('click', goToNext);
+    
+    // Indicator clicks
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex1 = index;
+            showSlide(currentIndex1);
+        });
+    });
+    
+    // Read more functionality
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const moreContent = this.previousElementSibling.querySelector('.more-content');
+            const isExpanded = moreContent.style.display === 'block';
+            
+            moreContent.style.display = isExpanded ? 'none' : 'block';
+            this.textContent = isExpanded ? 'Read More' : 'Read Less';
+            
+            // Scroll to show more content if needed
+            if (!isExpanded) {
+                this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            goToPrev();
+        } else if (e.key === 'ArrowRight') {
+            goToNext();
+        }
+    });
+    
+    // Initialize first slide
+    showSlide(currentIndex1);
 
 
 
