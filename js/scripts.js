@@ -97,110 +97,138 @@ for (let i = 0; i < 7; i++) {
     }
     // workingHoursList.appendChild(item);
 }
+  // const masthead = document.querySelector('.masthead');
+  // const slides = document.querySelectorAll('.background-slides .slide');
+  // const dotsContainer = document.querySelector('.slider-dots');
+  // const pauseBtn = document.querySelector('.pause-btn');
+  // const playBtn = document.querySelector('.play-btn');
+  
+  // let currentIndex = 0;
+  // let touchStartX = 0;
+  // let touchEndX = 0;
+  // let slideInterval;
 
-  const masthead = document.querySelector('.masthead');
-  const dotsContainer = document.querySelector('.slider-dots');
-  const pauseBtn = document.querySelector('.pause-btn');
-  const playBtn = document.querySelector('.play-btn');
-  
-  // Image URLs
-  const images = [
-    "/assets/img/img4.jpg",
-    "/assets/img/img3.jpg",
-    "/assets/img/img1.jpg",
-    "/assets/img/img2.jpg"
-  ];
-  
+  // // Create navigation dots
+  // slides.forEach((_, index) => {
+  //   const dot = document.createElement('div');
+  //   dot.classList.add('dot');
+  //   if (index === 0) dot.classList.add('active');
+  //   dot.addEventListener('click', () => goToSlide(index));
+  //   dotsContainer.appendChild(dot);
+  // });
+
+  // // Auto-slide function
+  // function startAutoSlide() {
+  //   slideInterval = setInterval(() => {
+  //     currentIndex = (currentIndex + 1) % slides.length;
+  //     updateSlides();
+  //   }, 5000); // Change slide every 5 seconds
+  // }
+
+  // // Update visible slide and active dot
+  // function updateSlides() {
+  //   slides.forEach((slide, index) => {
+  //     slide.classList.toggle('active', index === currentIndex);
+  //   });
+    
+  //   document.querySelectorAll('.dot').forEach((dot, index) => {
+  //     dot.classList.toggle('active', index === currentIndex);
+  //   });
+  // }
+
+  // // Manual navigation to specific slide
+  // function goToSlide(index) {
+  //   currentIndex = index;
+  //   updateSlides();
+  //   resetAutoSlide();
+  // }
+
+  // // Reset the auto-slide timer
+  // function resetAutoSlide() {
+  //   clearInterval(slideInterval);
+  //   startAutoSlide();
+  // }
+
+  // // Touch swipe detection
+  // masthead.addEventListener('touchstart', (e) => {
+  //   touchStartX = e.changedTouches[0].screenX;
+  //   clearInterval(slideInterval); // Pause auto-slide during swipe
+  // }, { passive: true });
+
+  // masthead.addEventListener('touchend', (e) => {
+  //   touchEndX = e.changedTouches[0].screenX;
+  //   handleSwipe();
+  //   startAutoSlide(); // Resume auto-slide after swipe
+  // }, { passive: true });
+
+  // function handleSwipe() {
+  //   const threshold = 50; // Minimum swipe distance in pixels
+    
+  //   if (touchEndX < touchStartX - threshold) {
+  //     // Swipe left - next slide
+  //     currentIndex = (currentIndex + 1) % slides.length;
+  //   } else if (touchEndX > touchStartX + threshold) {
+  //     // Swipe right - previous slide
+  //     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  //   }
+  //   updateSlides();
+  // }
+
+  // // Pause/Play controls
+  // pauseBtn.addEventListener('click', () => {
+  //   clearInterval(slideInterval);
+  //   pauseBtn.classList.add('hidden');
+  //   playBtn.classList.remove('hidden');
+  // });
+
+  // playBtn.addEventListener('click', () => {
+  //   startAutoSlide();
+  //   playBtn.classList.add('hidden');
+  //   pauseBtn.classList.remove('hidden');
+  // });
+
+  // // Keyboard navigation
+  // document.addEventListener('keydown', (e) => {
+  //   if (e.key === 'ArrowLeft') {
+  //     // Left arrow - previous slide
+  //     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  //     updateSlides();
+  //     resetAutoSlide();
+  //   } else if (e.key === 'ArrowRight') {
+  //     // Right arrow - next slide
+  //     currentIndex = (currentIndex + 1) % slides.length;
+  //     updateSlides();
+  //     resetAutoSlide();
+  //   }
+  // });
+
+  // // Initialize the slider
+  // updateSlides();
+  // startAutoSlide();
+
+const slides = document.querySelectorAll('.masthead-slide');
   let currentIndex = 0;
-  let touchStartX = 0;
-  let touchEndX = 0;
   let slideInterval;
 
-  // Create dots
-  images.forEach((_, index) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(index));
-    dotsContainer.appendChild(dot);
-  });
-
-  // Auto-slide function
-  function startAutoSlide() {
+  function startSlider() {
     slideInterval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      updateBackground();
-    }, 5000); // 5-second interval
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 5000); // Change every 5 seconds
   }
 
-  // Update background and dots
-  function updateBackground() {
-    masthead.style.backgroundImage = `url('${images[currentIndex]}')`;
-    
-    // Update dots
-    document.querySelectorAll('.dot').forEach((dot, index) => {
-      dot.classList.toggle('active', index === currentIndex);
-    });
-  }
-
-  // Manual navigation
-  function goToSlide(index) {
-    currentIndex = index;
-    updateBackground();
-    resetAutoSlide();
-  }
-
-  function resetAutoSlide() {
+  function stopSlider() {
     clearInterval(slideInterval);
-    startAutoSlide();
   }
 
-  // Touch swipe detection
-  masthead.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    clearInterval(slideInterval); // Pause auto-slide during swipe
-  }, { passive: true });
+  // Start the slider
+  startSlider();
 
-  masthead.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-    startAutoSlide(); // Resume auto-slide
-  }, { passive: true });
-
-  function handleSwipe() {
-    const threshold = 50; // Minimum swipe distance
-    if (touchEndX < touchStartX - threshold) {
-      // Swipe left (next)
-      currentIndex = (currentIndex + 1) % images.length;
-    } else if (touchEndX > touchStartX + threshold) {
-      // Swipe right (previous)
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-    }
-    updateBackground();
-  }
-
-  // Pause/Play controls
-  pauseBtn.addEventListener('click', () => {
-    clearInterval(slideInterval);
-    pauseBtn.classList.add('hidden');
-    playBtn.classList.remove('hidden');
-  });
-
-  playBtn.addEventListener('click', () => {
-    startAutoSlide();
-    playBtn.classList.add('hidden');
-    pauseBtn.classList.remove('hidden');
-  });
-
-  // Initialize
-  updateBackground();
-  startAutoSlide();
-
-
-
-
-
-
+  // Pause on hover (optional)
+  const masthead = document.querySelector('.masthead');
+  masthead.addEventListener('mouseenter', stopSlider);
+  masthead.addEventListener('mouseleave', startSlider);
 
 });
 

@@ -10999,6 +10999,31 @@ header.masthead {
   touch-action: pan-y; /* Enable vertical scroll but prevent horizontal */
 }
 
+/* Image Slides Container */
+.masthead-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Individual Slide */
+.masthead-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Active Slide */
+.masthead-slide.active {
+  opacity: 1;}
 /* Dots Navigation */
 .slider-dots {
   position: absolute;
@@ -12276,28 +12301,48 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 
 
-.background-slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+
+
+/* .slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+
+/* Individual Slides */
+/* .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: slideShow 20s infinite; 
 }
 
-.background-slides .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.slide-1 {
+  background-image: url('../assets/img/img1.jpg');
+  animation-delay: 0s;
+}
+.slide-2 {
+  background-image: url('../assets/img/img2.jpg');
+  animation-delay: 5s;
+}
+.slide-3 {
+  background-image: url('../assets/img/img3.jpg');
+  animation-delay: 10s;
+}
+.slide-4 {
+  background-image: url('../assets/img/img4.jpg');
+  animation-delay: 15s;
 }
 
-.background-slides .slide.active {
+@keyframes slideShow {
+  0%, 20% {
     opacity: 1;
-    z-index: 1;
-}
+  }
+  25%, 100% {
+    opacity: 0;
+  }
+} */
